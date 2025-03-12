@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    }
+    input{
+        margin-bottom: 15px;
+    }
+    legend{
+        margin-bottom: 15px;
+    }
+    form{
+        margin-bottom: 25px;
+    }
+    textarea{
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+</style>
+<body>
+    <form>
+        <fieldset>
+            <legend>Complete, por favor</legend>
+            <label for="hora1">Elija una hora:</label>
+            <input 
+                type="time" 
+                id="hora1" 
+                name="hora1" 
+                required
+            />
+            <br>
+            <label for="mensaje1"></label>
+            <textarea 
+                id="mensaje1" 
+                name="mensaje1" 
+                placeholder="Utilice este cuadro para escribir"
+                rows="6" 
+                cols="45" 
+                required></textarea>
+            <br>
+            <label>
+                <input 
+                type="radio" 
+                name="lenguaje" 
+                value="lenguajeava" 
+                required> 
+                Java
+            </label>
+            <label>
+                <input 
+                type="radio" 
+                name="lenguaje" 
+                value="lenguajepython" 
+                required> 
+                Python
+            </label>
+            <label>
+                <input 
+                type="radio" 
+                name="lenguaje" 
+                value="lenguajehtml" 
+                required> 
+                HTML
+            </label>
+            <label>
+                <input 
+                type="radio" 
+                name="lenguaje" 
+                value="lenguajevisual-basic" 
+                required> 
+                Visual Basic
+            </label>
+            <br>
+            <label for="archivo1">
+                Elija un fichero:
+                <input
+                type="file"
+                id="archivo1"
+                name="archivo1"
+                >
+            </label>
+            <br>
+            <label for="fecha">
+                Elija una fecha:
+                <input
+                type="date"
+                id="fecha"
+                name="fecha"
+                >
+            </label>
+            <br>
+            <label for="color1">
+                Elija un color:
+                <input
+                type="color"
+                id="color1"
+                name="color1"
+                >
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Rellene las opciones siguientes</legend>
+            <label>
+                <input 
+                type="checkbox"
+                name="procesador"
+                value="procesadorintel"
+                >
+                Intel
+            </label>
+            <br>
+            <label>
+                <input 
+                type="checkbox"
+                name="procesador"
+                value="procesadoramd"
+                >
+                AMD
+            </label>
+            <br>
+            <label for="hora2">Elija una hora:</label>
+            <input 
+                type="time" 
+                id="hora2" 
+                name="hora2" 
+                required
+            />
+            <br>
+            <label for="archivo2">
+                Elija un fichero:
+                <input
+                type="file"
+                id="archivo2"
+                name="archivo2"
+                >
+            </label>
+            <br>
+            <label>
+                <input
+                type="radio"
+                name="procesador"
+                value="procesadoramd"
+                >
+                AMD
+            </label>
+            <label>
+                <input
+                type="radio"
+                name="procesador"
+                value="procesadorintel-i5"
+                >
+                Intel i5
+            </label>
+            <label>
+                <input
+                type="radio"
+                name="procesador"
+                value="procesadorintel-i7"
+                >
+                Intel i7
+            </label>
+            <br>
+            <label for="mensaje2"></label>
+            <textarea 
+                id="mensaje2" 
+                name="mensaje2" 
+                placeholder="Utilice este recuadro para escribir"
+                rows="4" 
+                cols="55" 
+                required>
+            </textarea>
+            <br>
+            <label for="dni">DNI:</label>
+            <input 
+            type="text"
+            id="dni"
+            name="dni"
+            placeholder="Ingresa tu DNI"
+            >
+            <br>
+            <label for="nombre">Nombre:</label>
+            <input 
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Ingresa tu Nombre"
+            >
+            <br>
+            <label for="apellidos">Apellidos:</label>
+            <input 
+            type="text"
+            id="apellidos"
+            name="apellidos"
+            placeholder="Ingresa tus Apellidos"
+            >
+            <br>
+            <label for="telefono">Telefono:</label>
+            <input 
+            type="text"
+            id="telefono"
+            name="telefono"
+            placeholder="Ingresa tu Telefono"
+            >
+            <br>
+            <label for="color2">
+                Elija un color:
+                <input
+                type="color"
+                id="color2"
+                name="color2"
+                >
+            </label>
+        </fieldset>
+    </form>
+</body>
+</html>

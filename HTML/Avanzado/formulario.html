@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        input{
+            margin-bottom: 15px;
+        }
+        legend{
+            margin-bottom: 15px;
+        }
+        form{
+            margin-bottom: 25px;
+        }
+        textarea{
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <form action="">
+        
+        <fieldset>
+            <legend>Inicio de sesion</legend>
+            <label for="usuario">Usuario</label>
+            <input 
+                type="text" 
+                id="nombre" 
+                name="nombre" 
+                placeholder="Ingresa tu nombre" 
+                required
+            />
+            <br>
+            <label for="contraseña">Contraseña</label>
+            <input 
+                type="password" 
+                id="contraseña" 
+                name="contraseña" 
+                placeholder="Ingresa tu contraseña" 
+                required
+            />
+            <br>
+            <input type="reset" value="Borrar">
+            <input type="submit" value="Enviar">
+    </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Contacto</legend>
+            <label for="nombre">Nombre:</label>
+            <input 
+                type="text" 
+                id="nombre" 
+                name="nombre" 
+                required
+            />
+            <br>
+            <label for="email">Correo Electrónico:</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+            />
+            <br>
+            <label for="asunto">Asunto:</label>
+            <input 
+                type="text" 
+                id="asunto" 
+                name="asunto" 
+                required
+            />
+            <br>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea 
+                id="mensaje" 
+                name="mensaje" 
+                rows="4" 
+                cols="50" 
+                required></textarea>
+            <br>
+            <input type="reset" value="Borrar">
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Encuesta</legend>
+            <fieldset>
+                <legend>Opinión sobre el curso</legend>
+                <label for="opinion-profesor">Opinión sobre el profesor:</label><br>
+                <textarea 
+                    id="opinion-profesor" 
+                    name="opinion-profesor" 
+                    rows="4" 
+                    cols="50" 
+                    required></textarea>
+                <br>
+                <label for="opinion-temario">Opinión sobre el temario:</label><br>
+                <textarea 
+                    id="opinion-temario" 
+                    name="opinion-temario" 
+                    rows="4" 
+                    cols="50" 
+                    required></textarea>
+                <br>
+              </fieldset>
+              <br>
+              <fieldset>
+                <legend>Puntuación</legend>
+                <p>Evalua de 0 a 5 el curso en su conjunto:</p>
+                <label>
+                  <input 
+                  type="radio" 
+                  name="evalua" 
+                  value="0" 
+                  required> 
+                  0
+                </label>
+                <label>
+                    <input 
+                    type="radio" 
+                    name="evalua" 
+                    value="1" 
+                    required> 
+                    1
+                </label>
+                <label>
+                    <input 
+                    type="radio" 
+                    name="evalua" 
+                    value="2" 
+                    required> 
+                    2
+                </label>
+                <label>
+                    <input 
+                    type="radio" 
+                    name="evalua" 
+                    value="3" 
+                    required> 
+                    3
+                </label>
+                <label>
+                    <input 
+                    type="radio" 
+                    name="evalua" 
+                    value="4" 
+                    required> 
+                    4
+                </label>
+                <label>
+                    <input 
+                    type="radio" 
+                    name="evalua" 
+                    value="5" 
+                    required> 
+                    5
+                </label>
+                <br>
+                <p>Selecciona las áreas que más te han gustado:</p>
+                <label>
+                  <input 
+                    type="checkbox" 
+                    name="areas" 
+                    value="temario"
+                  /> 
+                  Temario
+                </label>
+                <label>
+                    <input 
+                      type="checkbox" 
+                      name="areas" 
+                      value="profesor"
+                    /> 
+                    Profesor
+                </label>
+                 <label>
+                    <input 
+                      type="checkbox" 
+                      name="areas" 
+                      value="herramientas"
+                    /> 
+                    Herramientas
+                </label>
+                <label>
+                    <input 
+                      type="checkbox" 
+                      name="areas" 
+                      value="compañeros"
+                    /> 
+                    Compañeros
+                </label>
+              </fieldset>
+              <br>
+              <input type="reset" value="Borrar">
+              <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+</body>
+</html>
