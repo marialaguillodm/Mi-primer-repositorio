@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inscripción</title>
+</head>
+<style>
+    *{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    }
+    input{
+        margin-bottom: 15px;
+    }
+    legend{
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    form{
+        margin-bottom: 25px;
+    }
+    textarea{
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    fieldset{
+        margin-bottom: 15px;
+        background-color: rgb(240, 245, 255);
+    }
+    .fieldset2{
+        margin-bottom: 15px;
+        background-color: rgb(255, 253, 240);
+    }
+    .legend2{
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 1.05em;
+    }
+    .info-transporte {
+        display: none;
+    }
+
+    #transporte:checked ~ .info-transporte {
+        display: block;
+    }
+</style>
+<body>
+    <!-- Primero añadimos los títulos del formulario -->
+    <h1>Innovación 2025</h1>
+    <h3>Formulario de inscripción</h3>
+    <form>
+        <!-- Lo primero vamos añadir los campos que se nos solicita para los 
+         datos personales en su propio fieldset -->
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre-apellidos">Nombres y Apellidos:</label>
+            <input
+            type="text"
+            id="nombre-apellidos"
+            name="nombre-apellidos"
+            required
+            >
+            <br>
+            <label for="email">E-mail:</label>
+            <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            >
+            <br>
+            <label for="contraseña">Contraseña:</label>
+            <input
+            type="password"
+            id="contraseña"
+            name="contraseña"
+            minlength="6"
+            required
+            >
+            <br>
+            <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+            <input
+            type="date"
+            id="fecha-nacimiento"
+            name="fecha-nacimiento"
+            required
+            >
+            <br>
+            <label>
+                <input 
+                type="radio"
+                name="genero"
+                value="masculino"
+                required
+                >
+                Masculino
+            </label>
+            <label>
+                <input 
+                type="radio"
+                name="genero"
+                value="femenino"
+                required
+                >
+                Femenino
+            </label>
+            <label>
+                <input 
+                type="radio"
+                name="genero"
+                value="otro"
+                required
+                >
+                Otro
+            </label>
+        </fieldset>
+        <!-- Generamos el segundo fielset con los datos de contacto -->
+        <fieldset>
+            <legend>Datos de contacto</legend>
+            <label for="telefono">Telefono:</label>
+            <input 
+            type="tel"
+            id="telefono"
+            name="telefono"
+            pattern="[0-9]{9}"
+            required
+            >
+            <br>
+            <label for="direccion">Dirección:</label>
+            <input 
+            type="text"
+            id="direccion"
+            name="direccion"
+            required
+            >
+            <br>
+            <label for="ciudad">Ciudad:</label>
+            <input 
+            type="text"
+            id="ciudad"
+            name="ciudad"
+            required
+            >
+            <br>
+            <label for="estado">Estado:</label>
+            <input 
+            type="text"
+            id="estado"
+            name="estado"
+            required
+            >
+            <br>
+            <label for="codigo-postal">Código Postal:</label>
+            <input 
+            type="text"
+            id="codigo-postal"
+            name="codigo-postal"
+            required
+            >
+            <br>
+            <label>
+                País:
+                <!-- Añadimos la selección de paises, he cogido paises de 
+                 europa y lo he colocado en orden alfabetico para facilitar la busqueda-->
+                <select name="pais" required>
+                    <option value="">Seleccione...</option>
+                    <option value="alemania">Alemania</option>
+                    <option value="austria">Austria</option>
+                    <option value="belgica">Bélgica</option>
+                    <option value="bulgaria">Bulgaria</option>
+                    <option value="chequia">Chequia</option>
+                    <option value="chipre">Chipre</option>
+                    <option value="croacia">Croacia</option>
+                    <option value="dinamarca">Dinamarca</option>
+                    <option value="eslovaquia">Eslovaquia</option>
+                    <option value="eslovenia">Eslovenia</option>
+                    <option value="españa">España</option>
+                    <option value="estonia">Estonia</option>
+                    <option value="francia">Francia</option>
+                    <option value="grecia">Grecia</option>
+                </select>
+            </label>
+        </fieldset>
+        <!-- Este fieldset de información adicional contiene distintos fieldset,
+         para diferenciarlos del principal he generado la clase fieldset2 y legend2
+         de esta manera podemos editar los formatos de este tipo de forma conjunta y 
+         más cómoda -->
+        <fieldset>
+            <legend>Información adicional</legend>
+            <fieldset class="fieldset2">
+                <legend class="legend2">Contacto de Emergencia</legend>
+                <label for="nombre-emergencia">Nombre</label>
+                <input 
+                type="text"
+                id="nombre-emergencia"
+                name="nombre-emergencia"
+                required
+                >
+                <!-- Aquí he añadido un margen para que sea más estético -->
+                <label for="telefono-emergencia" style="margin-left: 20px;">Telefono:</label>
+                <input 
+                type="tel"
+                id="telefono-emergencia"
+                name="telefono-emergencia"
+                pattern="[0-9]{9}"
+                required
+                >
+            </fieldset>
+            <fieldset class="fieldset2">
+                <legend class="legend2">Preferencias alimentarias</legend>
+                <label>
+                    <input 
+                    type="checkbox"
+                    name="dieta"
+                    value="vegetariano"
+                    >
+                    Vegetariano
+                    <input 
+                    type="checkbox"
+                    name="dieta"
+                    value="vegano"
+                    style="margin-left: 20px;"
+                    >
+                    Vegano
+                    <input 
+                    type="checkbox"
+                    name="dieta"
+                    value="sin-gluten"
+                    style="margin-left: 20px;"
+                    >
+                    Sin gluten
+                    <input 
+                    type="checkbox"
+                    name="dieta"
+                    value="Ninguno"
+                    style="margin-left: 20px;"
+                    >
+                    Ninguno
+                </label>
+            </fieldset>
+            <fieldset class="fieldset2">
+                <legend class="legend2">Subir Archivos</legend>
+                <label>
+                    Subir CV:
+                    <input 
+                    type="file" 
+                    id="cv"
+                    name="cv"
+                    accept=".pdf"
+                    >
+                </label>
+                <br>
+                <label>
+                    Subir Fotografía:
+                    <input 
+                    type="file" 
+                    id="foto"
+                    name="foto"
+                    accept="image/*"
+                    >
+                </label>
+            </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>Información de Viaje (Opcional)</legend>
+            <label>
+                <input 
+                type="checkbox"
+                id="transporte"
+                value="requiere-transporte"
+                >
+                Requiere transporte
+            
+                <!-- Selección oculta por defecto debo tenerla dentro del label
+                 para que funcione -->
+                <div class="info-transporte">
+                    <label for="aerolinea-preferida">Areolínea Preferida</label>
+                    <input 
+                    type="text"
+                    id="aerolinea-preferida"
+                    name="aerolinea-preferida"
+                    >
+                    <br>
+                    <label>
+                        Fecha de Llegada
+                        <input
+                            type="date"
+                            id="fecha-llegada"
+                            name="fecha-llegada"
+                            required
+                        >
+                    </label>
+                    <label style="margin-left: 20px;">
+                        Fecha de Salida
+                        <input
+                            type="date"
+                            id="fecha-salida"
+                            name="fecha-salida"
+                            required
+                        >
+                    </label>
+                </div>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Acuerdos y Consentimientos</legend>
+            <label>
+                <input 
+                type="checkbox"
+                id="terminos-condiciones"
+                name="terminos-condiciones"
+                required
+                >
+                Términos y Condiciones
+            </label>
+            <label style="margin-left: 20px;">
+                <input 
+                type="checkbox"
+                id="suscripcion-promociones"
+                name="suscripcion-promociones"
+                >
+                Suscripción a Promociones
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Información de Pago</legend>
+            <label for="numero-tarjeta">Número de Tarjeta de Crédito:</label>
+            <input
+            type="text"
+            id="numero-tarjeta"
+            name="numero-tarjeta"
+            pattern="\d{16}"
+            required
+            >
+            <br>
+            <label for="fecha-expiracion">
+                Fecha de Expiración:
+                <input 
+                type="month"
+                id="fecha-expiracion"
+                name="fecha-expiracion"
+                required
+                >
+            </label>
+            <br>
+            <label for="codigo-seguridad">Código de Seguridad</label>
+            <input 
+            type="number"
+            id="codigo-seguridad"
+            name="codigo-seguridad"
+            minlength="3"
+            maxlength="3"
+            required
+            >
+        </fieldset>
+        <fieldset>
+            <legend>Botones</legend>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+        </fieldset>
+    </form>
+</body>
+</html>
