@@ -18,7 +18,6 @@ body{
     border-bottom: 1px solid #ddd;
 }
 .info {
-    display: flex;
     flex-direction: column;
     margin-left: 20px;
     margin-top: 10px;
