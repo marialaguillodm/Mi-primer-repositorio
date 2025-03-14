@@ -1,15 +1,44 @@
+.caja{
+    width: 200px; 
+    height: 200px;
+}
 .rojo{
    background-color: red;
-   width: 200px; 
-   height: 200px; 
+   margin: 25px;
+   padding: 12px 22px; 
 }
 .verde{
    background-color: green;
-   width: 200px; 
-   height: 200px; 
+   margin: 11px 33px 20px 40px;
+   padding: 16px;
 }
 .amarillo{
    background-color: yellow;
-   width: 200px; 
-   height: 200px; 
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 30px;
+}
+.contenedor {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: lightblue;
+    border: 2px solid #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.boton {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
 }
