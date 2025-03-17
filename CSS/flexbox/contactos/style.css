@@ -11,7 +11,7 @@ body{
 .listado{
     background-color: white;
     width: 500px;
-    border-radius: 3px;
+    border-radius: 7px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);   
 }
 .contacto {
