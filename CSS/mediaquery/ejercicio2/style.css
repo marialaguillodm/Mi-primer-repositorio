@@ -1,0 +1,86 @@
+/* Estilos para móviles (por defecto o hasta 600px) */
+body{
+    display: flex;
+    align-content: center;
+    justify-content:center;
+    flex-direction: column;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 20px;
+}
+#title{
+    margin-bottom: 5px;
+}
+header {
+    background-color: rgb(77, 207, 250);
+    padding: 10px;
+    padding-bottom: 30px;
+}
+article{
+    padding: 10px;
+    padding-bottom: 30px;
+    margin-top: 3px;
+}
+#Hero{
+    background-color: red;
+}
+#Content{
+    background-color: green;
+}
+#Sidebar{
+    background-color: blueviolet
+}
+footer{
+    background-color: gray;
+    padding: 10px;
+    padding-bottom: 30px;
+    margin-top: 3px;
+}
+/*Estilo para Tablets (601px - 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .articulos {
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-rows: 2;
+    }
+    #Hero{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    #Content{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-right: 1.5px;
+    }
+    #Sidebar{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin-left: 1.5px;
+    }
+}
+
+/*Estilos para Desktop (1025px en adelante) */
+@media only screen and (min-width: 1025px) {
+    .articulos {
+        display: grid;
+        grid-template-columns: 4;
+        grid-template-rows: 2;
+    }
+    #Hero{
+        grid-column: 1/5;
+        grid-row: 1/2;
+    }
+    #Content{
+        grid-column: 1/4;
+        grid-row: 2/3;
+        margin-left: 50px;
+        margin-right: 1.5px;
+    }
+    #Sidebar{
+        grid-column: 4/5;
+        grid-row: 2/3;
+        margin-left: 1.5px;
+        margin-right: 50px;
+    }
+}
